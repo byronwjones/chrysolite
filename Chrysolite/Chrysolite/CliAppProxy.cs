@@ -133,7 +133,7 @@ namespace Chrysolite
                 messageBuffer = string.Empty;
             };
 
-            // the thread will hang here until a character becomes available to read off of the stream, or the stream is closed
+            // Read(...) will block the thread until a character becomes available to read off of the stream, or the stream is closed
             while (context.Stream.Read(charBuffer, 0, 1) > 0)
             {
                 var c = charBuffer[0];

@@ -80,13 +80,24 @@ namespace Chrysolite
         public string Description { get; }
 
         /// <summary>
-        /// Indicates whether or not this instance is actively interfacing with its
+        /// Gets an indication of whether or not this instance is actively interfacing with its
         /// associated application
         /// </summary>
         public bool Running { get; private set; }
 
+        /// <summary>
+        /// Raised when a message is emitted by the managed application's standard output stream
+        /// </summary>
         public event MessageReceivedEventHandler StandardMessageReceived;
+
+        /// <summary>
+        /// Raised when a message is emitted by the managed application's standard output stream
+        /// </summary>
         public event MessageReceivedEventHandler ErrorMessageReceived;
+
+        /// <summary>
+        /// Raised the managed application's process is terminated
+        /// </summary>
         public event AppExitedEventHandler AppExited;
 
         // bubble events up
