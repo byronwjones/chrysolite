@@ -7,7 +7,7 @@ An event-based API for automated control of command-line interface (CLI) applica
 ```C#
 string appPath = @"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe";
 
-AppInterface myPsAppInterface = new AppInterface(appPath, "Powershell", inactivityTimeout: 300000);
+AppInterface myPsAppInterface = new AppInterface(appPath, "Powershell");
 int context = 0;
 
 // handle output emitted by the CLI's standard output stream
@@ -58,10 +58,10 @@ myPsAppInterface.AppExited += (sender, args) =>
     WriteSubtitle("We closed PowerShell - all done!");
 
     // Allow the main thread to continue running from where ObserverApplication.Start() was invoked.
-    // In this example, this effectively terminates the application.
+    // In this example, this effectively terminates this application.
     ObserverApplication.Stop();
 };
 
-// Hang the application's main thread, allowing it to respond to events
+// Hang the application's main thread, allowing this application to respond to events
 ObserverApplication.Start();
 ```

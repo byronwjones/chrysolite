@@ -4,6 +4,28 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Company>Byron W Jones, LLC</Company>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <IncludeSymbols>False</IncludeSymbols>
+    <Copyright>Byron W Jones, LLC</Copyright>
+    <Description>An event-based API for automated control of command-line interface (CLI) applications, using the Observer pattern</Description>
+    <Version>0.0.1</Version>
+    <DebugType>embedded</DebugType>
+    <Title>Chrysolite CLI API</Title>
+    <Authors>Byron W Jones</Authors>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/byronwjones/chrysolite</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>CLI;C#;Automation;API</PackageTags>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
